@@ -3,6 +3,8 @@ package org.formacio.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +17,10 @@ public class Animal {
 	@Id 
 	@Column(name="ani_nom")
 	private String nom;
+	
+	@ManyToOne
+	@JoinColumn(name="per_nom")
+	private Persona persona;
 
 	public String getNom() {
 		return nom;
