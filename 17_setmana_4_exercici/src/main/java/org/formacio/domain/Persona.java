@@ -4,11 +4,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="T_PERSONES")
 @SequenceGenerator(name="sequencia_PERSONA", sequenceName="SEQ_PERSONA")
 public class Persona {
 
