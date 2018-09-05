@@ -1,11 +1,18 @@
 package org.formacio.domain;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 public class Municipi {
 
 	/**
 	 * L'id del municipi es el propi nom. No fa falta cap generador
 	 */
+	
+	@Id
+	@Column(name="mun_nom")
 	private String nom;
 
 	public String getNom() {
